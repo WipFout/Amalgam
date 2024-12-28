@@ -188,7 +188,7 @@ namespace Vars
 			CVar(HuntsmanAddLow, 0.f, DEBUGVAR)
 			CVar(HuntsmanClamp, 5.f, DEBUGVAR)
 			CVar(SplashGrates, true, DEBUGVAR)
-			CVarEnum(RocketSplashMode, 0, DEBUGVAR, SpecialHeavy, SpecialLight, Regular)
+			CVarEnum(RocketSplashMode, 1, DEBUGVAR, SpecialHeavy, SpecialLight, Regular)
 			CVar(SplashPoints, 400)
 			CVar(SplashCountDirect, 100, DEBUGVAR)
 			CVar(SplashCountArc, 100, DEBUGVAR)
