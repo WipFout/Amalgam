@@ -208,9 +208,9 @@ void CMenu::MenuAimbot(int iTab)
 				FDropdown("Auto airblast", Vars::Aimbot::Projectile::AutoAirblast, { "Enabled", "##Divider", "Redirect simple", "Redirect advanced", "##Divider", "Respect FOV" }, {}, FDropdown_Right | FDropdown_Multi); // todo: finish redirect advanced!!
 				FDropdown("Hitboxes## Projectile", Vars::Aimbot::Projectile::Hitboxes, { "Auto", "##Divider", "Head", "Body", "Feet", "##Divider", "Bodyaim if lethal", "Aim blast at feet" }, {}, FDropdown_Left | FDropdown_Multi, 0, nullptr, "Projectile hitboxes");
 				FDropdown("Modifiers## Projectile", Vars::Aimbot::Projectile::Modifiers, { "Charge shot", "Cancel charge", "Use prime time" }, {}, FDropdown_Right | FDropdown_Multi, 0, nullptr, "Projectile modifiers");
-				FSlider("Max simulation time", Vars::Aimbot::Projectile::PredictionTime, 0.1f, 2.5f, 0.25f, "%gs", FSlider_Left | FSlider_Min | FSlider_Precision);
+				FSlider("Max simulation time", Vars::Aimbot::Projectile::PredictionTime, 0.1f, 10f, 0.25f, "%gs", FSlider_Left | FSlider_Min | FSlider_Precision);
 				PushTransparent(!FGet(Vars::Aimbot::Projectile::StrafePrediction));
-				FSlider("Hit chance", Vars::Aimbot::Projectile::Hitchance, 0.f, 100.f, 10.f, "%g%%", FSlider_Right | FSlider_Clamp | FSlider_Precision);
+				FSlider("Hit chance", Vars::Aimbot::Projectile::Hitchance, 0.f, 100.f, 0.25f, "%g%%", FSlider_Right | FSlider_Clamp | FSlider_Precision);
 				PopTransparent();
 				FSlider("Autodet radius", Vars::Aimbot::Projectile::AutodetRadius, 0.f, 100.f, 10.f, "%g%%", FSlider_Left | FSlider_Clamp | FSlider_Precision);
 				FSlider("Splash radius", Vars::Aimbot::Projectile::SplashRadius, 0.f, 100.f, 10.f, "%g%%", FSlider_Right | FSlider_Clamp | FSlider_Precision);
